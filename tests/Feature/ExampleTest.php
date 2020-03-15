@@ -20,16 +20,4 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
-
-    public function test_task_list_can_be_retrieved()
-    {
-        Airlock::actingAs(
-            factory(User::class)->create(),
-            ['*']
-        );
-
-        $response = $this->get('/api/user');
-
-        $response->assertOk();
-    }
 }
