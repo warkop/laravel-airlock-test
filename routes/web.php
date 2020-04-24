@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,5 +19,8 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('/images', 'ImageController@getImages')->name('images');
+Route::post('/upload', 'ImageController@postUpload')->name('uploadfile');
 
 Route::get('/home', 'HomeController@index')->name('home');
