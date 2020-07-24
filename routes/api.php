@@ -43,3 +43,7 @@ Route::post('/airlock/token', function (Request $request) {
 
     return $user->createToken($request->device_name)->plainTextToken;
 });
+
+Route::get('profile', 'API\ProfileController@profile');
+Route::put('profile', 'API\ProfileController@updateProfile');
+Route::post('change-password', 'API\ProfileController@changePassword');
