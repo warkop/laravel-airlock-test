@@ -317,4 +317,5 @@ $RECYCLE.BIN/
 *.lnk
 composer.lock
 package-lock.json
+.scannerwork
 # End of https://www.gitignore.io/api/vim,linux,macos,laravel,windows,intellij,netbeans,phpstorm,notepadpp,sublimetext,visualstudiocode
